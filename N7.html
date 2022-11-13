@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\N7.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/N7.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체 제품의 성능과 용량에 직결되는 노광공정</h2>
+				<p>노광공정(Photolithography)은 반도체 원판(웨이퍼)에 회로를 새기는 공정으로, 반도체 집적재료를 원하는 패턴으로 깍아내는 작업이다. 일종의 ‘틀’인 마스크를 따라 웨이퍼 위에 빛으로 패턴을 그려넣는데, 공정이 미세할수록 설계 정밀도와 집적도에 영향을 미친다. 반도체 제품의 성능과 용원판(웨이퍼)에 회로를 새기는 공정으로, 반도체 집적재료를 원하는 패턴으로 깍아내는 작업이다. 
+			</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>ASML의 EUV 노광공정</h2>
+				<p>ASML은 불가능하다고 생각했던 극자외(EUV) 광원을 이용한 노광 장비를 개발 생산하는 유일한 기업이다.
+				ASML사의 EUV 노광장비는 CO₂레이저를 이용해 주석(Sn) 방울을 명중시켜 평평한 원판 모양을 만든 후, 다시 한번 맞춰서 플라스마 상태로 만든다. 이후 앞서 말한 원리로 플라스마에서 방출되는 EUV를 노광공정에 사용한다. 한 해에 약 40대쯤을 생산하며 수요에 비해 공급이 부족해 장비 구하기가 어렵다. 그렇기 때문에 반도체 업계의 슈퍼 乙(을)로 불린다.
+					
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

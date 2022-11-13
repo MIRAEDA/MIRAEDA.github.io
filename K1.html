@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\K1.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/K1.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>비트코인으로 인한 반도체 가격상승</h2>
+				<p>비트코인 하면 생각나는 반도체 장비 GPU는 지속적으로 서로 영향을 주고 받았다.
+					GPU는 제작단계에서 미세패터닝이 요구되어 원래 생산량이 많지 않은 제품들이었다.
+					그런데 비트코인의 채굴에 도움이 된다는 것이 밝혀지고 비트코인의 가격이 계속 치솟자 채굴업자의 대량 사재기가 발생하였다.
+					추가적으로 GPU내부에 들어간 DRAM의 가격상승과 버전 업들이 겹치며 일반적인 소비자가 엄두도 못 낼정도로 가격이 증가하게 되었다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>비트코인의 하향세 및 반도체의 악영향</h2>
+				<p>그러나 현재 비트코인의 가격이 많이 떨어져 채굴 수요가 떨어지면서 엔디비아의 GPU의 판매율은 절반까지 떨어졌다.
+					거기에 더해 PC의 교체주기가 길어지고 원자재와 공정비용들이 증가하게 되면서 악재가 겹쳐 이후의 GPU들은 가격인상을 겪을 것이다.
+					현재 주요 제작사인 엔디비아는 새로는 GPU라인인 40라인을 발표하였는데 우려대로 가격이 이전과 비교 불가능할 정도로 가격이 인상된 것을 확인할 수 있었다.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

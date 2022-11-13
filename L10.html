@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L10.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L10.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체의 나노공정은 무슨 뜻일까?</h2>
+				<p> 반도체 뉴스를 볼 때마다 나오는 7nm 공정 3nm 공정 여기서 나오는 숫자들은 무엇을 의미하는 것일까요?
+					우선 나노(nano)란 10^-9 즉 10억분의 1을 나타내는 접두어로 나노미터란 10억분의 1미터를 의미합니다.
+					적당히 감이 안 잡힌다면 일반적인 피부의 점 크기가 1000분의 1 밀리미터(mm)이며, 이 크기의 1000분의 1 세포 또는 혈액의 적혈구의 크기가 1000분의 1 마이크로미터(㎛), 이 크기의 1000분의 1이 나노미터(nm) DNA 크기에 해당합니다.
+					쉽게 말해 머리카락의 굵기(100㎛)의 10만분의 1로 이해하면 편합니다.					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체 공정 속 나노</h2>
+				<p>그렇다면 반도체 공정에서 3nm 5nm 공정은 반도체 안에 들어가는 회로의 폭을 의미합니다. 회로의 폭이 가늘수록 웨이퍼 한 장에 더 많은 반도체를 생산할 수 있고 가격은 내려가며, 회로가 작을수록 소비전력은 줄어들고 정보처리 속도는 빨라진다. 따라서 반도체 기업들 사이에서는 반도체를 더 작게 만들기 위해 노력하고 있습니다.			 
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i4.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i4.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>삼성Ram-DDR3</h2>
+				<p>2005년 개발된 삼성전자의 DDR3는 업계 최초로 등장하여 PC, 가전 제품부터 자동차 및 의료 기기까지 가장 많이 사용되는 시스템 솔루션이다.
+
+주파수폭 DDR2(400, 533, 667, 800 Mbps)의 2 배 삼성 DDR3의 대역폭과 안정성이 확장되어 노트북, 데스크탑과 자동차 등의 산업용 솔루션과 같은 다양한 애플리케이션을 DDR2(2~6 CL)의 두 배 속도로 작동시킨다.
+
+DDR2(1.8 V) 대비 전력 감축 최대 30 % 삼성전자의 업계 최초 30 nm 클래스 DRAM은 이전 세대에 비해 전력 소비를 30% 감축시켜 TCO를 낮춘다.
+
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>삼성Ram-DDR2</h2>
+				<p>세계 최초로 60나노 공정기술을 바탕으로 한 1Gb DDR2 제작되었다. 1Gb DDR2 SD램은 컴퓨터, 그래픽카드, 메모리 장치 등을 필요로 하는 각종 디지털 기기에 사용되는 반도체 메모리다.
+
+삼성전자는 기존 경쟁사 제품들이 1.8V 전압을 사용하는 데 비해 개발 제품은 1.55V 전압에서도 안정적인 동작이 가능하다. 보통 전압을 낮추면 반도체 수율이 떨어지는 게 일반적인데 삼성전자는 새로운 설계 방식을 통해 전압을 낮추면서도 수율은 떨어지지 않도록 하는 데 성공했다. 또한
+
+세계 최초로 1066Mbps 동작 특성을 가지는 반도체 메모리를 개발해 속도를 향상시켰다. 기존 1Gb DDR2 메모리는 보통 800Mbps 동작특성을 가졌다.
+
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

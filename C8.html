@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C8.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C8.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>칩4 제안한 미국의 자사 애플 중국과 손잡아</h2>
+				<p>애플이 아이폰 14 시리즈(9월 출시)와 보급형 모델(SE 3세대) 등에 중국의 반도체 기업 YMTC의 128단 낸드메모리를 탑재할 것으로 알려졌다.
+					SK하이닉스, 일본의 기옥시아에 이어 세 번째 낸드메모리 공급 업체로 YMTC를 선택한 것이다. 특히 애플은 자사의 소프트웨어 기술과 노하우를 이용해 YMTC의 부족한 기술력을 보완해주고 있다는 분석이 나온다.
+				 낸드메모리는 스마트폰·PC 등에 들어가는 저장장치로 D램과 함께 메모리반도체의 양대 축이다.
+				 시장에서는 애플이 중국 스마트폰시장의 장악력을 높이기 위해 중국기업을 선택한 것이라는 예측이 나오고 있다. 
+				 실제 애플의 연 매출 20%이상이 중국시장에서 나오고, 제품의 85%이상이 중국에서 생산되기 때문에 중국에 대한 애플의 의존도는 높은 편이라고 평가된다. 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>한국 기업과 애플</h2>
+				<p>애플의 이러한 전략은 한국 기업들에게 달갑지 않은 소식이다. 
+					업계 관계자는 “미국 정부가 반도체지원법 등을 통해 다른 나라 기업들의 중국 반도체 사업은 제한하면서 정작 자국 기업의 중국 지원은 모른 체하고 있다는 비판이 나올 수 있다”며 “우리도 면밀하게 상황을 모니터링하고 적극적으로 대응해야 한다”고 말했다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

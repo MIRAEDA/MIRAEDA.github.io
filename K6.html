@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\K6.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/K6.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>무역시장에서의 하이테크 제품</h2>
+				<p>제조할 때 R&D의 비중이 큰 제품인 하이테크 물품들은 현재 세계 교역액의 20%를 차지할 정도로 큰 시장을 가진 제품이다.
+					특히 한국에서는 총 수출액의 1/3이 전부 하이테크 품목일 정도로 이에 대한 수출의존도가 높다.
+					중국은 하이테크 제품의 주요 수입국으로 우리나라는 10년간 중국시장점유율이 2위였다.
+					그러나 최근 1위인 대만과의 격차가 벌어지고 있는데 이는 미국과 중국의 분쟁의 여파로 보인다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미국과 중국의 무역분쟁</h2>
+				<p>미국과 중국의 무역분쟁으로 두 나라는 서로에 나라에 대한 상호 의존도를 줄이고 있는데 이에 중국은 대만과의 공급망 연계를 강화하여 대만 제품의 수입이 증가하게 되었다.
+					이로 인해 타국의 반도체 수입은 점차 줄어가는 반면 대만에 대한 반도체 의존도는 증가하는 양상을 보인다.
+					김민우 한국무역협회 국제무역통상연구원 수석연구원은 미∙중 무역분쟁이 가속화되어 각 나라에서 기회와 위기가 동시에 나타나고 있어 
+					중장기적으로 시스템 반도체의 전반적인 영역의 역량을 키우고 항공우주, 의약품으로 차세대 주력산업을 확장해야 한다 주장한다.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

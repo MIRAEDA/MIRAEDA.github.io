@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\N8.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/N8.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>NXP, S32 프로세스 제품</h2>
+				<p>NXP는 S32 프로세서 제품군을 더 고도화된 프로세스 노드(node)로 마이그레이션 하게 됐다. S32 제품군의 개선은 자동차 제조업체의 차량 아키텍처 단순화와 미래차 실현을 앞당긴다.
+				S32G2 차량용 네트워킹 프로세서는 안전한 클라우드 연결과 무선 업데이트(OTA)를 위한 서비스 지향 게이트웨이를 지원하고, 사용량 기반 차량 상태 관리 등 데이터 기반 서비스를 가능하게 한다. 또한, 도메인·구역 컨트롤러로써 차세대 차량 아키텍처를 지원하고, 고급 운전자 지원과 자율 주행 시스템에서의 고성능 ASIL-D 안전 프로세서 역할도 수행한다.
+		
+			</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>NXP, TSMC의 16nm FinFET 기술로 차량용 반도체 양산</h2>
+				<p>S32G2와 함께 TSMC의 16㎚ 기술로 구현된 S32R294 레이더 프로세서는 NCAP와 첨단 코너 레이더뿐만 아니라 장거리 전방 레이더, 동시 사각지대 감지, 차선 변경 보조, 고도 감지 등 고급 멀티 모드를 위한 확장 가능 솔루션에 필요한 성능을 자동차 제조업체에 제공한다.
+				TSMC의 16㎚ 기술은 고급 FinFET 트랜지스터 파워를 NXP의 차량용 프로세서에 처음 공급했다. 이에 따른 성능 향상과 자동차 프로세스 기준 충족으로, NXP는 안전한 차세대 컴퓨팅 파워를 제공할 수 있게 됐다. 아울러, TSMC의 광범위한 자동차 프로세스 로드맵의 지원을 받음으로써, NXP는 S32 제품군에 TSMC의 5㎚ 공정 기술을 추가 도입할 수 있는 기반을 마련했다.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

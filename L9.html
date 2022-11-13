@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L9.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L9.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체 칩4동맹이란?</h2>
+				<p>최근 뉴스에는 칩4 동맹에 우리나라가 참가할지 않을지에 대한 뉴스가 끊임없이 나오고 있습니다. 우리나라가 칩4 동맹에 참가할지 않을지는 어려운 이야기이지만, 칩4 동맹의 계기와 칩4 동맹 국가들에 대해 치킨집을 통해 예를 들어 설명해보고자 합니다.
+				칩4 동맹은 반도체 굴기를 선언하고 급격히 발전하는 중국 시장을 견제하는 목적으로 만들어진 동맹입니다. 미국은 자국이 설계와 장비 원천기술을 일본은 소재/부품을 우리나라와 대만은 메모리/비메모리 반도체 생산을 담당하여 세계반도체시장 90%를 점유하고 있을 정도로 큰 동맹입니다. 							
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>쉽게 보는 칩4동맹</h2>
+				<p>치킨집으로 예를 들어 많은 가격을 투자하여 낮은 가격으로 가성비 좋은 치킨 즉 중국이 급 부상하려고 하여, 치킨의 비법과 특허를 가지고 있는 미국과 치킨의 재료 생산을 담당하는 일본, 마지막으로 치킨들을 생산하는 공장을 가지고 있는 우리나라와 대한민국이 동맹하여, 새로운 치킨을 견제하는 것으로 볼 수 있습니다.
+				깊게 들어가면 미국과 중국의 패권 경쟁의 이유가 될 수 있지만, 표면적인 이유는 위와 같습니다. 우리나라는 반도체의 주 수출국이 중국이고 반도체 분야 외에도 중국과 수입과 수출에서 밀접한 관계를 맺고 있어 우리나라의 칩4 동맹 결정에 어려움을 겪고 있습니다.					 
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

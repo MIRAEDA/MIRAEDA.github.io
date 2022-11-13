@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\N5.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/N5.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>IBM, 도쿄일렉트론과 세계 최초 3D 적층 기술 개발</h2>
+				<p>IBM은 글로벌 반도체 장비 기업 도쿄일렉트론(TEL)과 함께 300㎜ 실리콘 웨이퍼에 3차원(3D) 적층 기술을 적용할 수 있는 공정을 세계 최초로 개발했다고 밝혔다. IBM에 따르면 칩 적층 방식은 반도체 제조 방식을 간소화할 수 있을 것으로 기대되는 기술이다. 
+				현재 이 방식은 특정 부피에 포함될 수 있는 트랜지스터(반도체 소자) 수를 늘리는 데 도움이 되기 때문에 잠재성이 큰 기술이라는 것이 IBM 측 설명이다.
+			</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>레이어간 수직적 연결</h2>
+				<p>칩 적층 방식을 구현하기 위해선 실리콘 레이어(층) 간의 수직적 연결이 필요하다. 이때 실리콘 웨이퍼의 후면을 얇게 만들 수 있어야 하는데, 이러한 칩 스택을 구성하는 레이어는 보통 머리카락 굵기 정도인 10마이크론으로 깨지기 쉽다.
+				이 때문에 공정 과정에서 실리콘 웨이퍼를 유리로 만들어진 캐리어 웨이퍼에 일시적으로 부착해 생산 공정을 통과할 수 있게 하고, 이후 자외선 레이저로 두 웨이퍼를 분리하는 것이 일반적이다.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="swiper-slide">
+	<div class="inner">
+		<div class="con">
+			<img src="">
+			<h2>IBM과 TEL의 협력을 통한 실리콘 웨이퍼 사용</h2>
+			<p>그러나 이 경우 물리적인 힘이 가해지면서 결함이나 수율(전체 생산품에서 양품이 차지하는 비율) 손실이 발생할 가능성이 높아지는 문제가 있다. IBM은 TEL과의 협업을 통해 유리 대신 기본 실리콘 웨이퍼를 사용하고, 이후 웨이퍼 분리 과정에서 적외선 레이저를 이용할 수 있는 새로운 공정을 개발했다. 300㎜ 크기의 실리콘 웨이퍼로는 세계 최초의 해당 공정을 구현한 것이다.
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

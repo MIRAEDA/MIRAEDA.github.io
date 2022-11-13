@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L1.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L1.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>클라우드 서비스</h2>
+				<p>코로나로 인해 비대면 활동이 많아지고, 집에 있는 시간이 길어지면서 원격수업과 , 인터넷 쇼핑, OTT 배달 등의 사업이 크게 성장하였습니다. 이런 흐름에 발맞추기 위해 많은 기업이 클라우드를 적극적으로 도입하기 시작했습니다. 실제로, 지난해 퍼블릭 클라우드 서비스 시장은 2020년 643억달러 규모에서 41.4% 성장한 909억달러 규모에 달하였다는 조사결과도 확인할 수 있었습니다.		
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>클라우드 서비스란?</h2>
+				<p>클라우드 서비스란 인터넷을 통해 액세스할 수 있는 서버와 이러한 서버에서 작동하는 소프트웨어와 데이터베이스를 말합니다. 즉 인터넷으로 연결된 가상 데이터베이스로 우리가 일상생활에서 흔히 사용하는 삼성 클라우드 백업 프로그램부터 매일 보는 유튜브까지 클라우드 서비스에 속합니다.
+					우리가 흔히 사용하는 클라우드에 저장하는 정보들은 ‘데이터센터(Data Center)’에 보관되는데요. 데이터센터 내 수많은 정보의 저장과 처리를 돕는 것이 바로 ‘메모리 반도체’입니다. 그리고 그 중에서도 DRAM(Dynamic Random Access Memory)과 SSD(Solid Sate Drive)가 주로 사용되죠.
+					이 중에서도 SSD(Solid Sate Drive)는 비휘발성 메모리로 전원이 꺼져도 사라지지 않는 메모리 처리속도가 느리고, DRAM은 전원이 꺼지면 사라지는 메모리 반도체 이지만 속도가 빠릅니다.				 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>우리나라의 클라우드 서비스</h2>
+				<p>메모리 반도체 시장은 우리나라의 대표적인 반도체 기업인 삼성전자와 SK하이닉스가 차지하고 있습니다. D램은 이미 시장 절반 이상을 한국 반도체가 차지한지 오래인데다 최근 SK하이닉스가 인텔 낸드사업(현 솔리다임) 인수로 낸드 플래시 3위로 올라서면서 낸드시장에서도 한국 반도체가 과반 이상을 맡게 되었습니다. 앞서 이야기한데로 세계 클라우드 서비스 시장은 점차 증가하고 있으며, 국내 클라우드 시장도 KT와 NHN은 클라우드 독립 법인을 출범하고 네이버 클라우드도 신규 사내이사를 선임하며 국내외 클라우드 시장공략에 대한 의지를 보이고 있는 것으로 보아 메모리 반도체 시장도 밝을 것으로 보입니다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

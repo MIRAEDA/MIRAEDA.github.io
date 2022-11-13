@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\K7.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/K7.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체 공급망의 불안정</h2>
+				<p>
+					반도체는 다양한 분야의 산업에서 필수적으로 사용되어 국가안보와 경제성장에 필수적이다. 특히 첨단 기술제품이 수출액의 1/3을 차지하는 우리나라는 국가적으로도 매우 중요하다.
+					그러나 최근 코로나 19나 자연재해, 화재, 전쟁 등 예측되지 않은 문제들로 인해 공급망의 교란을 겪게 되었다.
+					이로 인해 현재 기업과 정부는 기존의 효율성보다 안정성과 회복력을 주안으로 한 정책과 전략으로 변화하고 있다.
+					현재 미국은 이와 같은 불안정한 공급망 때문에 현재 주요 핵심 산업의 공급망을 자국 내부에 조성하려는 정책을 펼치고 있다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미래 반도체 시장의 변화</h2>
+				<p>즉, 미국은기존에 대만을 비롯해 동아시아에서 이루어지던 생산 후공정을 미국 내부에서 진행하도록 하는 것이다.
+					전문가들은 이와 같은 정책이 지속되면 미국 중심의 반도체 공급망이 형성될 것이며 우리는 적극적으로 미국 시장에 진출할 필요가 있다고 말한다.
+					KIEP에서는 중국에 의존도가 높은 반도체 후공정 등에 있어 중국의 비중을 낮추고 노광장비 등의 취약 분야는 원천 기술의 소유자인 미국, 유럽, 일본 등과의 연대를 형성할 필요가 있다는 분석결과가 나왔다.
+</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

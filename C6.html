@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C6.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C6.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>재고 누적으로 인한 골머리, 메모리반도체의 위기?</h2>
+				<p>최근 반도체 시장에 불어온 한파가 계속되면서 메모리반도체 기업들의 재고 상황이 우려되고 있다. 29일 업계에 의하면 최근 글로벌 반도체 상위 200개 기업의 재고자산 회전일수는 2019년 초 수준과 비슷한 110일 로 나타났다.
+					메모리반도체 비중이 큰 국내 기업들도 마찬가지로 재고로 인한 문제에 시달리고 있다. 금융감독원과 업계에 의하면 상반기 말 기준 삼성전자의 전체 재고자산은 52조922억원을 기록했다. 삼성전자의 재고자산이 50조원을 넘어선 것은 올해 2분기가 처음인데, 지난해 말보다는 26%, 지난해 같은 기간과 비교해서는 55%나 늘어났다. 2분기 말 삼성전자 DS부문의 재고 자산은 지난해 말보다 30%나 증가했다. 글로벌 시장조사기관인 디스플레이서플라이체인은 삼성전자의 재고 회전일수가 2분기에 이미 평균 94일을 기록했다고 밝혔었다. 
+					SK하이닉스의 재고자산 역시 올해 2분기 말 기준 10조원을 넘어선 약 11조8700억원을 기록했다. 이는 지난해 동기간 대비 30% 이상의 증가 값을 보인다. 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>업계의 예상</h2>
+				<p>업계는 반도체 업체들이 하반기부터 보유 중인 반도체 재고의 해소를 위한 움직임에 나서게 될 것이라고 예상하고 있다. 특히 메모리반도체 비중이 큰 국내 기업들의 경우 , 반도체 가격 인하를 통한 시장 점유율 방어와, 재고 자산의 조정이 예상된다. 업계는 올해 연말, 또는 내년 초에 주요 기업들이 재고를 줄일 가능성이 크다고 보고 있다. 이는 메모리반도체 가격이 향후 전망치보다 더 큰 폭으로 조정될 수 있다는 예측도 나온다. 다른 메모리반도체 기업 역시 연쇄적으로 가격 인하를 진행할 가능성이 높기 때문이다.
+
+					업계 관계자는 “반도체 업황 악화의 영향이 장기화되면서 재고 조정으로 인한 추가적인 메모리반도체의 가격 인하 가능성과 수익성 하락 우려 역시 커지고 있는 상황”이라고 전했다.
+					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

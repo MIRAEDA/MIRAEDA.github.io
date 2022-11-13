@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i5.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i5.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>스펙</h2>
+				<p>CPU
+Qualcomm Kryo Prime MP1 3.19 GHz + Qualcomm Kryo Gold MP3 2.75 GHz + Qualcomm Kryo Silver MP4 2.02 GHz
+
+GPU
+Qualcomm Adreno 730 900 MHz
+
+탑재기종
+갤럭시 Z 폴드4, 갤럭시 Z 플립4, MIX Fold 2, Xiaomi 12S, Xiaomi 12S Pro, Xiaomi 12S Ultra, ROG Phone 6, ROG Phone 6 Pro, Red Magic 7S, Red Magic 7S Pro
+
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명</h2>
+				<p>스냅드래곤 8+ 1세대는 2021년 말 공개된 스냅드래곤 8 1세대의 성능 강화판이다. 4nm 공정에서 만들어지는 이 8코어 AP는 3.2GHz로 동작하는 성능 위주 코어 프라임 코텍스 X2 한 개,  2.8GHz로 동작하는 성능 위주 코어 코텍스 A710 세 개, 2GHz로 동작하는 효율 위주 코어 코텍스 A-510 네 개로 구성된다.
+
+스냅드래곤 8 1세대의 코어 클럭 주파수가 각각 3GHZ, 2.5GHZ, 1.8GHZ였던 것에 비하면 연산 성능이 약 7% 강화됐다. 그래픽 처리 코어인 아드레노의 성능도 전 모델보다 10% 높였고 전력 소모량은 30% 줄였다. 
+인공지능 기능을 처리하는 전용 엔진의 성능도 20% 늘렸다.
+
+ 
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

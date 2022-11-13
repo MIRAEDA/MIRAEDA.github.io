@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\N3.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/N3.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>Applied Materials의 반도체 미세공정 결점 극복 기술</h2>
+				<p>글로벌 반도체 장비기업 어플라이드머티어리얼즈가 미세공정을 활용한 반도체 제작의 장애물로 꼽혔던 전기저항을 줄일 수 있는 '아이오닉 PVD 시스템(Ioniq PVD System)'을 발표했다. 미세공정 과정에서 발생하는 전기저항으로 칩 성능 감소, 전력 소모 증가를 극복할 수 있는 기술이다. 이번 시스템 개발로 인공지능(AI) 개발에 주요 문제로 꼽혔던 극심한 전력소모 문제가 다소 줄어들 것으로 전망된다.
+			</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>아이오닉 PVD 시스템</h2>
+				<p>아이오닉 PVD 시스템은 어플라이드의 통합 소재 솔루션(IMS)으로 단일 고진공 시스템에서 물리기상증착(PVD)와 화학기상증착(CVD) 공정, 표면처리 공정을 지원한다. 이 시스템을 사용할 경우 반도체 제조사는 질화 티타늄 소재로 만들어지는 고저항 라이너 및 장벽층을 100% 순도의 저저항 PVD 텅스텐 박막으로 대체하고 CVD 텅스텐과 결합시켜 100% 순도의 텅스텐 메탈 전극을 생성할 수 있다. 
+				어플라이드머티어리얼즈 측은 "이 솔루션을 사용할 경우 전기저항 문제를 해결하고 2D 공정미세화를 3나노 이하로 구현할 수 있다"고 밝혔다
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

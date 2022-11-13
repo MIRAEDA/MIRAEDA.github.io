@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\W7.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/W7.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미국의 중국 견제 심화</h2>
+				<p>로이터 통신은 복수의 소식통을 인용, 미 상무부는 자국에서 생산된 반도체 제조 장비를 14나노미터(nm·10억분의 1ｍ) 이하 공정의 첨단 반도체를 생산하는 중국 내 공장으로 허가 없이 반출할 수 없도록 하는 새 수출 규정을 발표할 방침이라고 전했다.
+				앞서 미 상무부는 올해 초 미국 반도체 장비업체인 KLA, 램 리서치, 어플라이드 머티어리얼즈 등 3개사에 관련 조처를 공문으로 통보한 바 있다. 이에 미국 정치전문매체 더힐은 3개사는 이미 상무부 지침에 따르고 있다고 밝혔다.
+				로이터는 상무부는 지난달 미국 반도체 기업인 엔비디아, AMD에 인공지능(AI)용 반도체에 대해서도 허가 없이 반출하지 말라고 공문을 보낸 바 있는데, 이 조처 역시 발표될 새 규정에 명문화할 가능성이 있다고 설명했다.	이는 미국이 자국 내 특정 기업에만 적용하던 AI용 고성능 반도체 및 반도체 제조용 장비 수출 규제를 산업 전반으로 확대하겠다는 의미로 풀이된다.				
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>상무부 대변인의 발표</h2>
+				<p>상무부 대변인은 지난 9일 추가 규제 관련 질의에 답변을 거부하면서도 “추가적인 조처를 시행하기 위해 포괄적으로 접근하고 있다”라며 “미국의 국가 안보와 외교 이익을 보호하기 위한 것”이라고 말했다.
+				이는 미·중 기술패권 경쟁에서 미국이 아직 우위를 점하고 있는 반도체 장비산업 등 기술 분야를 중심으로 중국의 영향력을 차단하기 위한 미국 전략의 연장선으로 해석된다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

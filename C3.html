@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C3.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C3.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>삼성전자 DDR5로 반도체 한파 극복</h2>
+				<p>최근 반도체 시장에 불어온 한파가 장기화될 것으로 예측되었다. 
+					D램의 수요 둔화와 재고 과잉에 따른 글로벌 소비둔화로 완제품 업체들의 재고 소비가 원활하지 않기 때문인데, 이로 인해 3.4분기와 4.4분기 가격 또한 8~13%, 3~8%로 하락될 것이라 예상된다. 
+					이에 삼성전자는 DDR4의 가격인하를 통해 DDR3의 재고 털기를 진행하는데, 이는 
+					차세대 D램으로 주목받고 있는 ‘DDR5’에 집중하여 반도체 시장의 한파를 극복하려는 모습으로 보인다. 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>DDR5으로의 전환</h2>
+				<p>삼성전자는 공격적인 가격 전략을 앞세워 DDR5로의 전환을 통해 돌파구를 모색하고 있다. DDR5는 2020년 7월 국제반도체표준협의기구(JEDEC)이 발표한 최신 D램 규격이다. 
+					기존의 DDR4 대비 데이터 전송 속도가 약 2배 빠르며, 전력 효율은 30%가량 향상됐다. 평균판매가격도 30% 이상 비싸다. 
+					DDR5시장의 성장은 내년부터 본격적으로 이뤄질 것으로 예상된다. 
+					삼성전자는 작년 말 업계 최초로 극자외선(EUV) 공정을 적용한 14나노급 DDR5 D램 양산에 들어갔다. 4800Mbps 이상의 데이터 처리 속도, 512GB 용량을 지원하는 제품을 앞세워 DDR5 시장을 공략하고 있다.
+					시장조사기관 트렌드포스는 삼성전자와 SK하이닉스가 DDR3 D램의 생산량을 줄여가고 있다. 라고 지난 3월 밝혔었다. DDR3는 내년 단종이 유력하게 예상된다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

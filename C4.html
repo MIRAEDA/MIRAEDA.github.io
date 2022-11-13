@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C4.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C4.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>차량용 반도체의 성장 안전까지 챙길 수 있을까?</h2>
+				<p>전기차와 자율주행차가 발전함에 따라 차량용 반도체를 바라보는 기대가 커가고 있다. 
+					기술이 발전함에 따라 다양한 기능과 실용성을 요구로 하는 고성능 차량용 반도체의 수요가 증가하기에 삼성전자와 인텔 등 반도체 기업이 차량용 반도체 사업에 나서고 있는 이유다.
+					기존의 시장에서는 다품종 소량 생산으로 인한 낮은 수익성과 높은 안전성과 기술수준이 요구되었고, 차량용 반도체의 시장점유비율이 10%로 높지 않다는 점에서 크게 주목받지 못하였다. 
+					하지만 최근 전통 내연기관차에서 전기차와 자율주행차로의 빠른 전환으로 인해 차량용 반도체의 필요성 역시 부각되고 있다. 
+					삼성전자는 2017년 업계 최초의 차량용 유니버셜플래시스토리지를 선보인 적이 있다. 
+					이후 계속해서 자사 차량용 반도체를 선보이며 관련 사업에 뜻이 있음을 분명하게 밝혔다. 
+					해외 기업들의 시장 참전 또한 관전 요소인데, 인텔은 올해 차량용 반도체 파운드리 사업에 진출할것을 공식화 하였고, 퀄컴은 2021년 자율주행 스타트업인 스웨덴 기업 비오니어를 인수하며 뜻을 확실히 밝혔다. 
+					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>차량용 반도체 시장의 성장</h2>
+				<p>시장조사업체 옴디아는 이러한 행보를 토대로 세계 차량용 반도체 시장의 두 자릿수 성장을 예상했다. 
+					차량용 반도체 시장에 대한 관심과 투자가 높아짐에 따라 관련 기술 개발 속도 역시 빨라질 것으로 예측되었다.
+					다만 차량용 반도체는 다른 휴대용 기기와 달리 높은 수준의 내구성과 안전성이 요구되므로 더 지켜봐야 한다는 입장도 나오고 있다. 
+					김양팽 산업연구원 전문위원은 “자율주행차나 전기차엔 고성능 반도체가 많이 사용되다 보니 미세 반도체가 필요해질 수 있지만 기술 발전과 안정성은 다른 얘기다”며 “차량용 반도체는 안정성이 중요하다. 제품을 생산하더라도 실험해서 도입하려면 수년이 걸린다”고 설명했다.
+					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

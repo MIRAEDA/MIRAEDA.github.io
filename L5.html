@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L5.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L5.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>전력관리 반도체(PMIC)</h2>
+				<p>심장이 우리 몸에 알맞은 기관으로 혈액을 공급하듯이 전자기기 부속품들에 알맞은 전력을 공급하여 효율을 높이는 역할을 합니다. PMIC는 우리가 흔히 보는 스마트폰, 스마트워치, 블루투스 이어폰, 자동차 등 전력이 필요로 하는 모든 기기에 사용되는 반도체입니다.		
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>PMIC의 소개</h2>
+				<p>PMIC는 우리 몸에 심장과도 같은 기관이지만, 기기 하나당 한 개의 PMIC가 들어가는 것이 아니라 고성능 스마트폰에 경우는 10개 자동차에 경우에는 다량에 전력관리 반도체를 필요로 하며, 사물인터넷이 일상에 스며들수록 전력관리반도체의 수요는 증가할 것이고, 자율주행이나 전기차에도 전력관리 반도체는 필수이기 때문에 전력관리 반도체의 수요는 앞으로도 증가할 것으로 보입니다. 실제로 전력관리 반도체는 전력반도체 중에서도 가장 큰 비중(21%)을 차지할 정도로 핵심적인 반도체입니다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>전력관리 반도체의 시장성장</h2>
+				<p>전력관리 반도체 PMIC는 전자장치 속 부품들은 필요한 전력이 모두 다르기 때문에 PMIC는 각 부품에 알맞게 전력을 변환하고 분배하고 제어하는 역할을 하는데요. 이를 통해 전력을 안정적이면서도 가장 효율적으로 사용할 수 있도록 합니다.  
+				실제로 작년 12월 PMIC의 공급 부족으로 다수의 8인치 파운드리 업체는 올해 파운드리 공급 단가를 10~20% 인상하겠다는 결정을 내렸으며, 국내 8인치 파운드리 업체인 DB하이텍은 지난 2분기 매출 4357억원과 영업이익 2132억원을 올렸다고 12일 발표했습니다. 지난해 같은 기간과 비교하면 매출과 영업이익이 각각 59%, 162% 증가했습니다. 2분기 영업이익률은 49%까지 치솟았습니다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

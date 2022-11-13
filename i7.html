@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i7.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i7.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>SK하이닉스-DDR4</h2>
+				<p>SK 하이닉스의 16Gb DDR4는 이전 DRAM보다 적은 전력과 더 높은 구성 밀도로 강력한 성능을 제공하며 당사의 DDR4는 DDR3보다 20% 적은 작동 전압을 소비하면서 3200MT/s의 대역폭을 제공하여 전력 절감 및 TCO 절감과 결합된 차세대 엔터프라이즈 애플리케이션을 위한 강력한 성능을 발휘한다.
+
+클라우드 컴퓨팅 및 빅 데이터 분석의 도래로 인해 점점 더 빨라지는 데이터 처리에 대한 요구로 인해 오늘날의 IT 시스템에서 그 어느 때보다 높은 밀도와 성능을 갖춘 메모리가 필요합니다. SK hynix DDR4는 각 시스템에 대한 고급 속도 옵션과 입증된 RAS(신뢰성, 가용성 및 서비스 가능성)의 이점을 추가하여 이러한 요구에 최적의 솔루션을 가지고 있다.
+
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>SK하이닉스-DDR5</h2>
+				<p>업계 최초로 JEDEC 호환 DDR5 DRAM을 개발한 SK하이닉스는 1ynm 16Gb DDR5로 차세대 메모리 시대를 선도할 것으로 기대하고 있습니다. DDR4에 비해 성능이 향상되고 TCO가 절감되어 고객에게 더 큰 가치를 제공하는 동시에 20% 더 작아진 전력 사용량(1.1V의 작동 전압으로 2배 속도)을 보유하며 16Gb DDR5는 현재 4,800Mbps의 속도로 데이터를 처리할 수 있지만 더 큰 메모리 대역폭에 대한 수요가 증가함에 따라 고밀도 DDR5로 6,400Mbps 이상의 더 빠른 속도를 달성하는 것을 목표로 한다.
+
+DDR5는 아키텍처에 8개의 뱅크 그룹과 32개의 뱅크가 있는 DDR4의 2배 메모리 액세스 가용성을 제공합니다. 이는 모두 DDR4의 2배이며, 모든 뱅크 그룹에서 특정 뱅크가 새로 고쳐지는 동안 다른 뱅크에 액세스할 수 있도록 하는 Same Bank Refresh 기능으로 지원된다.
+
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

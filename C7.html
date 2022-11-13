@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C7.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C7.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>반도체 인력 향상에 1조원 투입</h2>
+				<p>30일 기획재정부가 발표한 2023년도 예산안에 의하면 정부는 반도체 산업의 초격차, 원전의 회복을 위해 약 1조 7천억원의 예산을 투입하기로 했다. 
+					구체적으로 인력 양성을 위한 반도체 특성화학과 확대와 인력양성 기관인 반도체 아카데미 신설 등으로 인력 양성 규모를 1만5000명에서 2만6000명 수준으로 확대하고, 이를 위해 1천 800억에서 4500억원으로 대폭 확대된 예산을 투입한다.
+					인공지능·지능형반도체 등 차세대 반도체와 반도체 설계의 팹리스, 첨단 패키징 등 반도체 관련 유망기술 연구개발(R&D) 지원에는 3900억원의 예산을, 팹 고도화 등 반도체 실증 인프라 구축과 반도체기업 제품 개발·설계 등과 같은 사업화 지원에는 1700억의 예산을 편성하였다. 					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>인재 양성 규모</h2>
+				<p>반도체특성화대학(원) 총 9곳에 570억원을 신규편성하고 반도체공동연구소 개설에는 60억원의 지원이 예정되었다. 
+					미래 유망 신기술·신산업 분야의 인재 양성 규모는 16만2000명에서 20만3000명으로 확대했으며, 예산 규모도 1조6000억원에서 2조원으로 확대되었다.
+					반도체·소부장 등 현장 인력에 필요한 3만9000명의 전문기술교육 지원에 관한 예산은 4000억원으로 책정했다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

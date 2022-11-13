@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i3.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i3.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>스펙</h2>
+				<p>CPU : Samsung Exynos M4 MP2 2.73 GHz + ARM Cortex-A75 MP2 2.4 GHz + ARM Cortex-A55 MP4 1.95 GHz
+GPU : ARM Mali-G76 MP12 754 MHz
+메모리 : 64-bit 쿼드채널 LPDDR4X 2093 MHz
+생산 공정 : 삼성 파운드리 7nm FinFET LPE (EUV)
+사용기기 : 갤럭시 노트10, 갤럭시 노트10+, 갤럭시 F62
+
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명(1)</h2>
+				<p>2019년 8월 7일에 공개된 모바일 AP로, 엑시노스 9 Series (9820)의 리비전 AP로 구성이 동일하며 성능 개선 보다는 전력 대비 성능비가 개선되었다. 업계 최초의 7 나노 EUV 공정 기술 기반 모바일 프로세서인 엑시노스 9825는 뛰어난 전력 효율성과 높은 성능을 자랑합니다. EUV 극자외선 리소그래피를 도입한 삼성은 극자외선 파장을 활용하여 더 미세한 회로를 인쇄하여 더 빠르고 더 전력 효율성이 높은 프로세서를 개발하였다. 인공지능 기반 사진에서 증강 현실에 이르기까지, 차세대 모바일 기능을 위해 설계된 통합 NPU(신경망처리장치)를 탑재하고 있습니다. 이 NPU 는 빠르고 효율적인 AI 처리를 통해 온디바이스 AI 에 대한 새로운 기능성을 제공하며, 최적화된 사진 촬영을 위한 객체 인식, 사용 패턴 인식 및 더 빠른 앱 로딩 속도 등 다양한 인공지능 기능을 제공하여 성능을 향상시켰다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명(2)</h2>
+				<p>옥타코어 CPU은 막강한 성능을 작은 패키징 안에 담아냅니다. 삼중 클러스터 구조는 4세대 커스텀 CPU 2개, 최적의 성능을 위한 Cortex®-A75 코어 2개, 높은 효율성을 위한 Cortex-A55 코어 4개로 구성되어, 사용자가 어떤 작업을 하든 최적의 성능을 발휘합니다. 듀얼 Cortex-A75 코어의 진화된 클럭 속도와 7 나노 EUV 기술 덕분에,  빠른 속도와 높은 전력 효율성를 자랑하며 뛰어난 배터리 지속시간과 최적화된 성능을 얻었습니다. 4G LTE-Advanced Pro 모뎀을 탑재하고 8x 캐리어 어그리게이션을 지원하여 최대 2Gbps의 다운로드 속도와 안정적인 연결을 제공한다. 첨단 이미지 처리 장치 및 AI가 탑재되어 이미지 처리 성능이 한 차원 높아집니다. NPU는 ISP가 수정하는 다양한 피사체와 장면을 감지하고 식별할 수 있으므로, 화이트 밸런스, 초점, 노출, 채도 및 색상을 얻을 수 있습니다. 다중 카메라 설정을 지원하기 때문에, 망원, 광각, 초광각 렌즈에서부터 보케 효과가 가능한 3D 심도 센서에 이르기까지 필요한 모든 기능을 손쉽게 이용할 수 있습니다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

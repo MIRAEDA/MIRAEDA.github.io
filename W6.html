@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\W6.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/W6.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미국, 멕시코와 손 잡나?</h2>
+				<p>미국의 토니 블링컨 국무장관과 지나 러몬드 상무장관은  멕시코시티에서 열린 멕시코와 2차 고위급 경제대화에서 에너지 정책관련 분쟁 대신 반도체를 비롯한 다른 기술 관련 잠재적 협력을 집중 논의했다고 AFP통신은 전했다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>라이몬도 미 상무장관의 발표</h2>
+				<p>라이몬도 미 상무장관은 "중국과 대만에서 반도체 테스팅부터 패키징, 어셈블리(조립)까지 산업 규모는 600억달러에 달하는 반면 북미 반도체산업은 30억달러에 불과하다"고 말했다.
+				라이몬도 장관은 지난달 미국에서 승인된 520억달러 규모의 반도체 육성법과 관련해 "미국과 멕시코에서 고용창출 기회가 생겨 매우 흥분된다"고 밝혔다. 그는 "멕시코가 제조공장 뿐 아니라 테스팅와 패키징, 어셈블리까지 확보하는 기회가 생긴다"고 강조했다.					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>마르셀로 에브라르드 멕시코 외무장관의 입장</h2>
+				<p>마르셀로 에브라르드 멕시코 외무장관은 미국의 제안을 환영하며 반도체 산업이 "매우 위험하다"고 평가했다.
+					멕시코는 에너지 정책 문제로 북미자유무역협정(NAFTA)을 맺고 있는 미국, 캐나다와 무역긴장이 심해졌지만 이번 경제대화에서 관련 문제를 최대한 배제하며 유화적 분위기였다고 AFP는 전했다. 미 정부는 지난 7월 멕시코 에너지 정책이 미국 기업을 차별한다며 공식적으로 문제를 제기했다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>블링컨 미 국무장관의 대답</h2>
+				<p>이에 대해 블링컨 미 국무장관은 "국제적 합의 하에 분쟁을 해결하는 것이 가장 가까운 동맹국들과의 무역 관계에서도 정상적 방식"이라고 말했다.	그는 "우리 경제의 통합을 더하고 세계에서 가장 경쟁적 경제지역을 건설하기 위해 완전 속도를 높이며 움직이고 있다"며 "공급망, 친환경 에너지경제, 반도체 관련해 협력을 강화하기 위한 노력을 기울이고 있다"고 덧붙였다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

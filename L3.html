@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L3.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L3.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>Display Driver IC</h2>
+				<p>CIS(CMOS Image Sensors)가 각종 전자제품의 영상을 표현하는 것과 연관이 있듯이 DDI(Display Driver IC)도 영상을 표현하는 것과 관련이 있습니다. 차이점이라면 CIS는 신호를 바꾸는 역할을 수행하고 DDI는 이를 색으로 표현하는 역할을 수행합니다.
+
+					Display Driver IC의 약자인 DDI는 쉽게 말해 스마트폰과 티비의 화면을 구동하는 장치입니다. 디스플레이 하나의 화소에는 빛의 삼원색인 RGB를 표시하는 부화소에 트랜지스터가 설계되어 있는데, DDI는 이걸 조종하는 역할을 합니다.
+					
+					DDI는 디스플레이를 구성하는 화소를 조절해 색상을 나타내도록 해주는 부품입니다. 즉 전달받은 디지털 신호를 RGB 아날로그 값으로 전환해 디스플레이에 전달해 주는 회로입니다. 나날이 해상도가 높아지는 전자제품의 디스플레이. DDI가 없다면 지금과 같은 디스플레이도 만들어질 수 없었습니다.					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>DDI 주력제품과 시장</h2>
+				<p>DDI 주력 제품은 크게 세 가지로 나뉘어집니다. 스마트폰에 들어가는 Mobile DDI(MDDI), 태블릿이나 스마트 TV 등 중대형 전자제품에 들어가는 Panel DDI(PDDI), 그리고 DDI와 디스플레이 사이에서 중재 역할을 하는 T-CON(Timing CONtroller)입니다.
+				DDI의 시장은 2022년 1분기 기준으로 삼성전자가 점유하고 있지만, OLED의 수요 증가로 2022 년에도 실적 성장세는 지속될 것으로 보인다. 특히 전세계 1 위 TV 업체인 삼성전자가 LG 디스플레이의 WOLED TV 패널 채택이 유력해지면서 OLED TV 용 DDI 수요 성장의 가시성이 높아질 것으로 보입니다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>우리나라의 클라우드 서비스</h2>
+				<p>메모리 반도체 시장은 우리나라의 대표적인 반도체 기업인 삼성전자와 SK하이닉스가 차지하고 있습니다. D램은 이미 시장 절반 이상을 한국 반도체가 차지한지 오래인데다 최근 SK하이닉스가 인텔 낸드사업(현 솔리다임) 인수로 낸드 플래시 3위로 올라서면서 낸드시장에서도 한국 반도체가 과반 이상을 맡게 되었습니다. 앞서 이야기한데로 세계 클라우드 서비스 시장은 점차 증가하고 있으며, 국내 클라우드 시장도 KT와 NHN은 클라우드 독립 법인을 출범하고 네이버 클라우드도 신규 사내이사를 선임하며 국내외 클라우드 시장공략에 대한 의지를 보이고 있는 것으로 보아 메모리 반도체 시장도 밝을 것으로 보입니다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

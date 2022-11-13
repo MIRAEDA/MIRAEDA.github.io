@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i2.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i2.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>스펙</h2>
+				<p>CPU : 3 GHz + 2.7 GHz + 2 GHz / 2.73 GHz + 2.31 GHz + 1.95 GHz 
+(Samsung Exynos M4 MP2 + ARM Cortex-A75 MP2 + ARM Cortex-A55 MP4)
+GPU : ARM Mali-G76 MP12 702 MHz
+메모리 : 64-bit 쿼드채널 LPDDR4X 2093 MHz
+생산 공정 : 삼성 파운드리 8nm FinFET LPP
+사용기기 : 갤럭시 S10e, 갤럭시 S10, 갤럭시 S10+, 갤럭시 S10 5G
+
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명(1)</h2>
+				<p>2018년 11월 14일에 공개된 플래그십 모바일 AP로, 엑시노스 9 Series (9810)의 후속작으로 개발 코드네임은 Makalu이다. CPU는 전작인 엑시노스 9 Series (9810)과 비교할 때 싱글코어 성능은 약 20%의 성능 향상이 있고 멀티코어 성능은 약 15%의 성능 향상이 있다고 하며 약 40%의 전력 효율이 개선되었다. GPU는 ARM Mali-G76을 도데카코어 구성으로 탑재했으며 전작인 엑시노스 9 Series (9810)과 비교할 때 약 40% 이상의 성능 향상과 약 35%의 전력 효율이 개선되었다고 한다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명(2)</h2>
+				<p>인공신경망 프로세서인 NPU는 삼성전자가 최초로 개발한 1세대 디자인 NPU 아키텍처를 듀얼코어 구성으로 탑재했으며 엑시노스 시리즈로는 최초로 탑재한 것이다. 이로 인해 생체인식 솔루션과 연계해 사용하거나 AI 성능을 별도로 처리한다. 이는 전작인 엑시노스 9 Series (9810) 대비 AI 성능이 약 7배 이상 향상되었다. 생산 공정은 삼성전자 파운드리 사업부의 8nm FinFET LPP 공정이다. 이는 10nm FinFET LPP 공정의 개량 공정으로, 성능이 약 5%에서 10% 정도 향상했고 전력 소모율이 약 10% 개선되었으며 다이 사이즈 역시 약 15% 감소했다고 한다. 이는 경쟁사인 TSMC의 7nm FinFET (ArFi) 공정과 동급이라는 평가를 받았다.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

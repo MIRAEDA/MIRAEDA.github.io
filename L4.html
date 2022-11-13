@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L4.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L4.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>MEMS 압력센서</h2>
+				<p>압력센서는 인가되는 유체의 압력, 즉, 센서에 가해지는 힘의 크기를 물리량으로 받아들이고 이를 전기적인 신호로 변환시켜 출력해 주는 감지기로 고압, 중압, 저압 등 사용 용도에 따라 응용되는 분야가 매우 다양한 센서입니다.
+				대규모 장치시스템 제어, 자동차 분야로부터 최근에는 핼스케어, 의료기기, 가전 모바일 등과 같은 중소형기기에도 활용되는 수요가 많은 센서류의 한 품목을 점유하고 있으며, 특히 초소형화 및 대량생산에 유리한 Micro Electro Mechanical Systems(MEMS) 압력센서가 주류를 이루고 있는데 압력감지 방식에 따라서 압저항형(Piezoresistive)과 정전용량형(Capacitive) 방식으로 나누어 볼 수 있습니다.						 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>압력센서의 사용분야</h2>
+				<p>압력센서는 다양한 산업군에서 널리 사용되고 있으며, MEMS 압력센서가 개발되면서 더욱 많은 분야에 적용되고 있습니다.
+					가장 많이 사용되고 있는 분야인 자동차에는 현재 약 10여 종, 20개 이상의 압력센서가 장착되고 있으며, 전기자동자, 연료전지 자동차, 지능형 자동차, 무인 자동차 등 새로운 형태의 자동차가 개발되면서 요구되는 센서가 증가하고 있으며 압력센서도 마찬가지로 더 많이 장착될 것으로 보입니다.
+					또한 전통적으로 오랫동안 사용됐던 산업 분야에서도 기존에 조립형태로 만든 모듈형태의 압력센서를 MEMS 압력센서를 활용한 소형 고감도 압력센서로 대체될 것으로 보입니다.							
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미래 시장 전망</h2>
+				<p>또한, 지금까지의 압력센서는 자동차 및 산업용으로 주로 사용돼 왔으나, IoT 및 모바일 기술의 발달과 함께 앞으로는 모바일 및 웨어러블 기기, 의료 및 헬스케어, 가전제품과 같은 일상생활 전반에 걸쳐 그 응용 분야가 확대되면서 더 많은 종류의 압력센서가 개발될 것으로 보입니다.
+				MEMS 압력센서는 대표적인 MEMS 센서로써 전 세계적으로 수십 개의 센서업체가 제품을 개발하여 판매하고 있다. 이 중 Bosch, Denso, Sensata, GE Sensing, Freescale 등 자동차용 센서 중심의 회사들이 시장의 50% 이상을 점유하고 있으며, 나머지 업체들이 다양한 분야에서 압력센서를 제작하고 있습니다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\W11.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/W11.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>중국의 반도체 생산 위기</h2>
+				<p>중국의 올해 8월 반도체 생산량이 급감한 것으로 나타났다. 코로나19 확산을 막기 위한 강력한 봉쇄 정책과 글로벌 반도체 패권 경쟁 등이 영향을 미친 것으로 풀이된다.
+				17일 홍콩 사우스차이나모닝포스트(SCMP)에 따르면 중국 국가통계국이 발표한 8월 중국 반도체 칩(집적회로·IC) 생산량은 247억개로 전년 동기 대비 24.7% 감소했다.
+				이는 월간 기준 2020년 10월 이후 가장 적은 수준이다. 생산량 감소 폭인 24.7% 또한 중국 당국이 반도체 생산량 월별 집계를 시작한 1997년 이후 사상 최대 수준이다.
+					중국 반도체 칩 생산량은 꾸준히 줄어드는 추세다. 중국의 올해 1~8월 IC 생산량은 2181억개로 전년 동기 대비 10% 감소했다.				
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>코로나의 여파</h2>
+				<p>올해 초 중국 정부가 코로나19 확산을 막기 위해 펼친 엄격한 통제 정책이 생산량에 영향을 미쳤다. 중국 정부는 상하이를 비롯해 중국 내 주요 도시를 봉쇄하는 ‘제로 코로나’ 정책을 연초부터 펼쳐 왔다. 따라서 반도체 생산시설도 한동안 문을 닫아야 했다. 여기에 전 세계적인 경기 침체로 수요 자체가 감소한 여파도 있다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>미국의 제재로인한 영향</h2>
+				<p>글로벌 반도체 기술 경쟁이 본격화한 가운데 중국이 충격을 피하지 못했다는 분석도 나온다. 그간 중국은 반도체 자립을 목표로 ‘반도체 굴기’ 정책을 펼쳐 왔다. ‘반도체 항모’로 불리는 칭화유니를 비롯해 중국 최대 파운드리(반도체 위탁생산) SMIC, 화훙반도체 등 기업을 지원하고 있다.
+
+					하지만 미국이 반도체 패권을 잡고자 글로벌 공급망을 재편하는 등 압박하면서 중국의 반도체 굴기가 위태로워지고 있다. 미국 정부는 글로벌 반도체 장비기업이 중국으로 장비를 수출하는 것을 금지하는 한편, 우리나라와 일본, 대만을 포함한 ‘칩4 동맹’ 등을 구성하겠다고 나선 상태다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

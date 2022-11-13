@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C1.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C1.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>3나노 공정의 핵심 EUV 노광장비</h2>
+				<p>반도체 시장이 불황을 겪고 있는 현재, ASML, 램리서치, TEL 등 글로벌 반도체 장비업체의 2분기 실적이 지난해보다 크게 증가한 것으로 나타났다. 공급망 불안과 경기 침체 우려에도 장비 공급이 늘어난 것이 이유로 예상됐다. 
+					네덜란드 ASML의 2분기 매출은 54억 3100만유로 (약 7조 2221억원)으로 작년 대비 35% 증가했다. ASML은 7나노이하 반도체 공정에 필수인 극자외선(EUV) 노광장비를 세계에서 유일하게 생산하고 있다. 					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>삼성전자와 EUV</h2>
+				<p>차세대 생산 기술에 필수적인 노광장비의 안정적인 수급이 비메모리 경쟁 업체의 중요사항인 만큼, 이재용 삼성전자 부회장은 장비 확보를 위해 지난 5월 유럽 출장에 ASML 피터 베닝크 CEO등과 만나 협력을 도모한 바 있다. 
+					삼성전자가 TSMC와의 경쟁에서 우위를 선점하는데 있어 ASML의 EUV장비의 확보는 앞으로의 최첨단 반도체 생산에 있어 큰 역할을 할 것으로 기대된다. 
+					한편, 화성시는 ASML 코리아와 지난해 11월 동탄 2신도시에 약 2400억원을 사용하여 ASML 화성 반도체 클러스터를 조성하는 투자협약을 체결했다. 					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

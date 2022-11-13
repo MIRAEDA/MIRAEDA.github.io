@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\W5.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/W5.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>급변하는 정세, 대만 동향은?</h2>
+				<p>낸시 펠로시 미국 하원의장이 이번 주 대만을 방문하며 미국과 대만 관계에 힘이 실리고 있으나, 대만은 현실적으로 중국 의존도가 크게 높은 것으로 진단됐다.
+				CNBC와 윈드인포메이션을 통해 접속한 대만 공식 자료 등에 따르면 지난해 대만의 수출 비중은 중국 본토와 홍콩이 총 42%에 달했다. 미국에 대한 수출은 전체의 15%에 불과했다.
+				펠로시 하원의장같이 미국 최고위급 인사가 대만에 발을 들인 것은 25년 만에 처음이다. 대만은 그의 방문 이후 금주 중국으로부터 군사와 경제적 압박을 받고 있다.
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>생각보다 높은 대만의 중국의존도</h2>
+				<p>대만은 최근 중국 본토와 홍콩과의 산업 및 경제적 관계가 매우 커졌다.
+					세계 최대 반도체 제조업체인 TSMC와 같이 첨단 기술 산업에 속하는 많은 대만 대기업이 중국 본토에서 공장을 운영 중이다.
+					대만은 작년에 중국 본토와 홍콩에 1천889억1천만 달러를 수출했는데, 이중 절반 이상이 전자부품이었고 다음으로는 광학 장비가 많았다.
+					대만의 미국 수출 규모는 657억 달러인데, 이는 대만의 동남아 수출액인 702억5천만 달러보다도 낮은 수준이다.					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>대만의 수입원 분석</h2>
+				<p>대만의 수입원으로는 중국 본토와 홍콩이 22%의 비율로 압도적인 1위를 차지했다. 미국의 해당 비율은 10%에 그쳐 대만의 수입원으로서 일본과 유럽, 동남아에 비해서도 뒤처졌다.
+					작년뿐 아니라 최근 5년을 보더라도 대만은 중국 본토로부터 수입과 수출 규모를 모두 늘려왔다.
+					대만의 중국 본토 수입은 87% 급증했지만, 미국으로부터의 수입은 44% 느는 데 그쳤다.
+					대만의 중국 본토에 대한 수출은 같은 기간 71% 증가했고, 대미 수출은 97% 늘었다. 애플 아이폰의 최대 공급업체인 폭스콘과 같은 대만 기업은 중국 본토에서 공장을 운영해 물량을 미국으로 넘긴다.
+					한편, 대만 경제는 중국 내 상하이와 맞먹는다.
+					지난 2020년 인구 조사에 따르면 대만 전체 인구는 2천360만 명으로, 상하이 인구 약 2천500만 명보다 다소 적었다. 대만의 경제 규모는 7천815억 달러로, 상하이 6천803억1천만 달러보다 소폭 큰 것으로 나타났다.
+					작년 중국 본토 내 국내총생산(GDP) 내 상하이 비중은 약 3.8%였다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\L8.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/L8.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>쉽게 보는 반도체 기업 종류</h2>
+				<p>반도체 공장은 웨이퍼가 투입돼 완성품이 나올 때까지 보통 2~3개월이 걸리며, 이 과정에서 600여 개의 공정을 거치는데요. 600여 개의 공정을 여러 기업이 나누어 진행하게 되고, 기업마다 각자의 분야가 나뉘어져 있습니다.
+				크게 반도체의 설계를 담당하는 팹리스, 반도체를 생산을 위주로 하는 파운드리, 마지막으로 반도체를 포장하고 작동을 확인하는 패키징/테스트, 그리고 종합적으로 모든 일을 수행하는IDM으로 나뉘는데 보기만 해도 어려운 이 단어들을 맥도날드를 예로 들어 설명해보려 합니다.						 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>햄버거와 비교하는 반도체 기업</h2>
+				<p>맥도날드에서 신메뉴가 나오기 전 맥도날드에서는 새로운 메뉴를 연구하면서 개발합니다. 이와 같이 반도체 회로를 설계하고 연구하는 기업을 팹리스(Fabless)라고 하고, 새롭게 연구되어지고 개발된 메뉴를 생산하는 매장 반도체로 치면 공장이 있어 생산을 위주로 하는 기업을 파운드리(Foundry)라고 합니다. 마지막으로  만들어진 햄버거, 반도체를 포장하고 테스트 하는 업체를 패키징/테스트 업체라고 합니다.
+				반대로 맥도날드와 다르게 혼자서 연구하고 생산하는 수제 버거집 같은 경우는 IDM 종합 반도체 회사라고 할 수 있습니다.					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

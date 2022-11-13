@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\i6.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/i6.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>스펙</h2>
+				<p>CPU 2코어 Apple Avalanche 2.93[iPad]/3.23 GHz + 4코어 Apple Blizzard 1.82[iPad]/2.02 GHz
+
+GPU 5/4코어 5세대 자체 디자인 아키텍처 MHz
+
+5코어 GPU 기준 전작인 Apple A14 Bionic APL1W01 대비 약 55%의 성능 향상과 약 35%의 전력 효율 향상이 됬다..
+
+탑재기종
+iPad mini(6세대), iPhone 13 Pro, iPhone 13 Pro Max에만 온전한 5코어 GPU가 들어가며,  iPhone 13 mini와 iPhone 13, iPhone SE(3세대)는 4코어로 GPU 코어 1개를 비활성화하여 차별을 두었다.
+ 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>설명</h2>
+				<p>싱글 코어는 약 10%, 멀티 코어는 18% 정도 향상된 것으로 보인다. 다만 공정 개선이 없었고 아키텍쳐의 개선도 크지 않았는지 A14 대비 딱 클럭 오른 만큼만 성능이 올랐고 고클럭화로 인해 CPU의 전성비는 되려 A14보다 미세하게 떨어지는 것으로 측정되었다.
+
+코어 GPU 기준 전작인 Apple A14 Bionic APL1W01 대비 약 55%의 성능 향상과 약 35%의 전력 효율 향상이 있다.  4코어 GPU 기준으로도 전작 대비 약 15%의 성능 향상을 가진다.
+
+생산 공정은 TSMC의 5nm FinFET P (EUV) 공정이다. 트랜지스터 수는 전작인 Apple A14 Bionic APL1W01의 118억 개에서 150억 개로 약 27% 증가하였다. 늘어난 트랜지스터의 상당수는 CPU보다 코덱과 관련된 언코어와 NPU 쪽에 투자된 것으로 보인다. CPU의 성능 향상은 공정 개선으로 인한 약 10%의 클럭 향상이 전부이다. 
+
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

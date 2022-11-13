@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C5.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C5.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>삼성전자 파운드리 업계 1위 추격 기회</h2>
+				<p>TSMC와 인텔의 차질이 파운드리 시장에서 TSMC의 사실상 유일한 경쟁자인 삼성전자에게 매우 유리하게 작용할 것으로 보인다. 삼성전자는 지난2분기 실적 발표에서 다수의 대형 고객사를 확보함에 따라 3나노 파운드리 양산을 공식화 한 바 있다. 
+				다만 삼성전자가 고객의 요구를 충족시키지 못한다면, TSMC로의 전환 가능성이 있어 안심할 수 만은 없다는 입장이다. 
+				인텔 또한 파운드리 분야에서의 자체 제품 생산, 고객 확보를 위한 기술 경쟁력을 발전시키고 있으며, 이러한 상황에서 4나노 이하 공정 계획이 순탄하지 않을 경우 TSMC나 삼성전자에 공정을 맡길 가능성을 배제할 수 없다. 
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>주춤거리는 TSMC</h2>
+				<p>TSMC와 인텔의 차질이 파운드리 시장에서 TSMC의 사실상 유일한 경쟁자인 삼성전자에게 매우 유리하게 작용할 것으로 보인다. 삼성전자는 지난2분기 실적 발표에서 다수의 대형 고객사를 확보함에 따라 3나노 파운드리 양산을 공식화 한 바 있다. 
+				다만 삼성전자가 고객의 요구를 충족시키지 못한다면, TSMC로의 전환 가능성이 있어 안심할 수 만은 없다는 입장이다. 
+				인텔 또한 파운드리 분야에서의 자체 제품 생산, 고객 확보를 위한 기술 경쟁력을 발전시키고 있으며, 이러한 상황에서 4나노 이하 공정 계획이 순탄하지 않을 경우 TSMC나 삼성전자에 공정을 맡길 가능성을 배제할 수 없다. 
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>

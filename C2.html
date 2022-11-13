@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DASEUL</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css\C2.css">	
+	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>	
+
+	<div class="wrap">
+		<a href="#" onclick="location.href='index.html'">
+		<h1>< 뒤로 가기 <span></span></h1>
+	</a>
+		<ul class="auto">
+			<li class="btnStart"><i class="fas fa-play"></i></li>
+			<li class="btnStop"><i class="fas fa-pause"></i></li>
+		</ul>
+
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="img/C2.jpg">
+				<h2></h2>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>SK하이닉스 초격차 경영으로 위기 벗어나나</h2>
+				<p>SK하이닉스가 메모리 초격차 기술로 반도체 혹한기를 극복하겠다고 밝혔다. 
+					SK 하이닉스 및 산하기업의 주력 제품은 메모리 반도체이며, 시스템 반도체인 CIS생산과 파운드리 사업도 병행하고 있다. 
+					주로 휘발성 메모리인 DRAM과 비휘발성 메모리인 NAND Flash를 주력으로 생산하고 있다. 
+					최근 이어지는 반도체 시장의 하락세에 SK 하이닉스는 경쟁사를 압도할 수 있을 만큼의 높은 기술 수준의 신제품 개발을 통한 초격차 경영을 내세웠다
+					SK하이닉스는 지난 1일 DDR5 D램 기반 CXL 메모리 샘플을 내놓으면서 'CXL 초격차' 경쟁에 뛰어들었다. 각종 정보기술(IT) 기기의 CPU, 그래픽처리장치(GPU), 가속기, 메모리 등에 들어가는 CXL의 '범용성'을 살려 고객과 수익성을 확보할 계획이다
+					
+					</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-slide">
+		<div class="inner">
+			<div class="con">
+				<img src="">
+				<h2>DDR5으로의 전환</h2>
+				<p>업계에 따르면 인텔, AMD등 글로벌 업체의 차세대 서버용 CPU의 공개가 다음달로 예정되며, DDR5 D램을 납품하는 SK와 삼성이 수혜를 입을 가능성이 매우 커졌다. 
+					DDR5 D램은 CPU의 연산을 돕는 메모리 반도체이다 .. 
+					삼성과 Sk모두 14nm급 미세공정 기술을 갖췄으며, 극자외선 노광 장비를 이용한 10nm급 D램 양산도 꾸준히 개발중이다. 
+					 SK하이닉스는 업체 최대인 24Gb(기가비트) DDR5 D램 제품의 샘플을 지난해 말 출하한 적이 있다. 기존 DDR5 D램 용량인 16Gb를 24Gb로 늘렸으며, 속도도 최대 33%가량 높였다.
+					서버용 CPU에 쓰이는 D램은 시장도 크고 범용성도 넓은 만큼 고성능.저전력 메모리 반도체의 수요가 폭증할 것으로 보인다는게 반도체 업계의 입장이다. 					
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- 좌우버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		
+		<!-- 페이징 버튼 -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap',{	
+			direction: "horizontal",
+			loop: true,						
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},	
+			navigation : {				
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',			
+			},
+			spaceBetween: 0,
+			slidesPerView: "auto",
+			grabCursor: true,
+			centeredSlides :true,
+			speed:1000,
+			effect:"coverflow",	
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false,
+			}
+			//autoplay: {
+				//delay:1000,		
+				//disableOnInteraction : true
+			//}	
+		});
+
+		// .btnStart 요소를 찾아서 btnStart에 저장
+		const btnStart = document.querySelector(".btnStart");
+		// .btnStop 요소를 찾아서 btnStop에 저장
+		const btnStop = document.querySelector(".btnStop");
+
+		//btnStart버튼을 클릭시 자동롤링 시작
+		btnStart.addEventListener("click",()=>{
+			swiper.autoplay.start();
+		});
+
+		//btnStart버튼을 클릭시 자동롤링 정지
+		btnStop.addEventListener("click",()=>{
+			swiper.autoplay.stop();
+		});
+	</script>	
+</body>
+</html>
