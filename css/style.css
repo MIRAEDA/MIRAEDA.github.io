@@ -205,7 +205,7 @@ main section article {
 		width:50%;
 	}
 }
-@media screen and (max-width:539px){
+@media screen and (max-width:320px){
 	header ul {
 		display: none;
 	}
